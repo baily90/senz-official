@@ -12,6 +12,5 @@ if (import.meta.env.VITE_BUILD_ENV !== 'PRO') {
 
 app.use(store)
 app.use(router)
-app.use(Lazyload)
 
 app.mount('#app')
