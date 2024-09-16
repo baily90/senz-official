@@ -3,6 +3,7 @@ import router from './router'
 import { store } from './stores'
 import 'default-passive-events'
 import Vconsole from 'vconsole'
+import './main.less'
 
 const app = createApp(App)
 
