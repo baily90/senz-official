@@ -16,7 +16,6 @@ const router = createRouter({
           name: 'PCHOME',
           component: () => import('@/views/pc/home/index.vue'),
           meta: {
-            title: '首页'
           }
         }
       ]

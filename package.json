@@ -13,6 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vant/touch-emulator": "^1.4.0",
     "@vueuse/core": "^11.0.3",
     "axios": "^1.7.7",
     "default-passive-events": "^2.0.0",
