@@ -1,20 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NProgress from '@/utils/progress'
 import { useTitle } from '@vueuse/core'
-import PCLayout from '@/layout/PCLayout.vue'
+import Layout from '@/layout/Layout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/pc',
-      name: 'PC',
-      component: PCLayout,
+      path: '/',
+      name: 'Layout',
+      component: Layout,
       children: [
         {
           path: '',
-          name: 'PCHOME',
-          component: () => import('@/views/pc/home/index.vue'),
+          name: 'Home',
+          component: () => import('@/views/home/index.vue'),
+          meta: {
+          }
+        },
+        {
+          path: 'about',
+          name: 'About',
+          component: () => import('@/views/about/index.vue'),
           meta: {
           }
         }

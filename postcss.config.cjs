@@ -1,7 +1,10 @@
 module.exports = {
   plugins: {
-    'postcss-px-to-viewport-8-plugin': {
-      viewportWidth: 1920
+    'postcss-pxtorem': {
+      rootValue: 37.5,
+      propList: ['*'],
+      selectorBlackList: ['van-'],
+      replace: true
     },
     autoprefixer: {
       overrideBrowserslist: ['Android >= 4.0', 'iOS >= 7']

@@ -13,22 +13,22 @@
         <div class="second-title wow fadeInUp" data-wow-delay="0.4s">10分钟即可获取报告</div>
         <div class="tips wow fadeInUp" data-wow-delay="0.5s">简单易用的操作方式，引导非超声医师2分钟完成检查；<br />
           远端专业医师，快速响应，10分出具专业报告</div>
-        <van-button class="btn-contant wow fadeInUp" data-wow-delay=".6s" type="primary">联系我们</van-button>
+        <van-button class="btn-contant wow fadeInUp" data-wow-delay=".6s" type="primary" @click="onScrollBottomHandle">联系我们</van-button>
       </div>
       <div id="lottie" class="wow fadeInUp" data-wow-delay="0.2s"></div>
     </section>
 
     <!-- 图像 -->
     <section class="image">
-      <van-swipe ref="swipe" class="swipe wow fadeInLeft" data-wow-delay="0.2s">
+      <van-swipe ref="swipe" :show-indicators="false" :autoplay="3000" :duration="1000" @change="onChange" class="swipe wow fadeInLeft" data-wow-delay="0.2s">
         <van-swipe-item class="swipe-item">
-          <img src="@/assets/images/pc/software1.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/pc/software1.png" alt="software" />
         </van-swipe-item>
         <van-swipe-item class="swipe-item">
-          <img src="@/assets/images/pc/software2.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/pc/software2.png" alt="software" />
         </van-swipe-item>
         <van-swipe-item class="swipe-item">
-          <img src="@/assets/images/pc/software3.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/pc/software3.png" alt="software" />
         </van-swipe-item>
       </van-swipe>
       <div class="content wow fadeInRight" data-wow-delay="0.2s">
@@ -66,21 +66,23 @@
           影像家园
         </div>
         <div class="second-title wow fadeInUp" data-wow-delay="0.4s">无场地要求、无影像科要求、赋能基层诊所，共创基层影像家园</div>
-        <van-button class="btn-contact wow fadeInUp" data-wow-delay="0.5s" link type="primary">进一步了解我们的任务</van-button>
-        <img class="left-img wow fadeInUp" data-wow-delay="0.5s" src="@/assets/images/pc/home2.png" alt="mission" />
+        <van-button class="btn-contact wow fadeInUp" data-wow-delay="0.5s" link type="primary" @click="onScrollBottomHandle">进一步了解我们的任务</van-button>
+        <img @dragstart.prevent class="left-img wow fadeInUp" data-wow-delay="0.5s" src="@/assets/images/pc/home2.png" alt="mission" />
       </div>
-      <img class="right wow fadeInDown"  data-wow-delay="0.2s" src="@/assets/images/pc/home1.png" alt="mission" />
+      <div class="right">
+        <img @dragstart.prevent class="wow fadeInDown"  data-wow-delay="0.2s" src="@/assets/images/pc/home1.png" alt="mission" />
+      </div>
     </section>
 
     <!-- 权威认证 -->
     <section class="about">
       <div class="first-title wow fadeInDown" data-wow-delay="0.2s">权威认证</div>
       <div class="second-title wow fadeInUp" data-wow-delay="0.5s">荣获多种权威认证证书</div>
-      <img src="@/assets/images/pc/about.gif" class="cert" alt="GIF Image" />
+      <img @dragstart.prevent src="@/assets/images/pc/about.gif" class="cert" alt="GIF Image" />
     </section>
 
     <!-- 联系我们 -->
-    <section class="contact">
+    <div class="contact">
       <div class="first-title wow fadeInDown" data-wow-delay="0.2s">我们期待您的加入！</div>
       <div class="second-title wow fadeInUp" data-wow-delay="0.4s">扫描二维码访问Senz公众号</div>
       <img class="qr_gzh wow fadeInLeft"  data-wow-delay="0.3s" src="@/assets/images/qr_gzh.png" alt="qr_gzh" />
@@ -89,7 +91,7 @@
         &nbsp;&nbsp;Copyright © 2018-2024 版权所有&nbsp;&nbsp;
         <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502017406" target="_blank">沪公网安备 31011502017406号</a>
       </div>
-    </section>
+    </div>
   </div>
 
 </template>
@@ -99,14 +101,27 @@ import WOW from 'wow.js'
 import 'wow.js/css/libs/animate.css'
 import lottie from 'lottie-web'
 import animationData from '@/assets/animation/lottie/data.json'
+import { useWindowScroll } from '@vueuse/core'
 
+const { y } = useWindowScroll({ behavior: 'smooth' })
 const swipe = ref(null)
 const activeIndex = ref(0)
 const record = ref('沪ICP备19048066号-4')
+const host = window.location.host
+if (host.indexOf('senzco.com') !== -1) {
+  record.value = '沪ICP备19048066号-9'
+}
 
+const onScrollBottomHandle = () => {
+  y.value = window.document.body.clientHeight
+}
 const onHover = index => {
   activeIndex.value = index
   swipe.value.swipeTo(index)
+}
+
+const onChange = index => {
+  activeIndex.value = index
 }
 
 onMounted(() => {
