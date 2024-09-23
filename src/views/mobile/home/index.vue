@@ -4,6 +4,7 @@
     <div class="banner">
       <div class="wow fadeInDown" data-wow-delay="0.2s">让全球每一位医生</div>
       <div class="wow fadeInUp" data-wow-delay="0.5s">都能用上医学影像</div>
+      <ScrollTip class="scroll-tip" />
     </div>
     <!-- 深至科技 -->
     <section class="technology">
@@ -87,6 +88,7 @@ import 'wow.js/css/libs/animate.css'
 import lottie from 'lottie-web'
 import animationData from '@/assets/animation/lottie/data.json'
 import { useWindowScroll } from '@vueuse/core'
+import ScrollTip from '@/components/ScrollTip/index.vue'
 
 const { y } = useWindowScroll({ behavior: 'smooth' })
 const swipe = ref(null)
