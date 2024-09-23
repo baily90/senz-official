@@ -21,7 +21,7 @@
   min-width: 2px;
   height: 95px;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   .tip {
     position: absolute;
     left: 50%;

@@ -48,6 +48,22 @@ const router = createRouter({
           }
         },
         {
+          path: 'product/310',
+          name: 'Product310',
+          component: () => import('@/views/mobile/product/310.vue'),
+          meta: {
+            type: 'mobile'
+          }
+        },
+        {
+          path: 'product/330',
+          name: 'Product330',
+          component: () => import('@/views/mobile/product/330.vue'),
+          meta: {
+            type: 'mobile'
+          }
+        },
+        {
           path: 'about',
           name: 'MobileAbout',
           component: () => import('@/views/mobile/about/index.vue'),
