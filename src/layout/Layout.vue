@@ -1,6 +1,7 @@
 <template>
   <div class="container-layout">
-    <Navbar />
+    <component v-if="isPc()" :is="PcNavbar" />
+    <component v-if="isMobile()" :is="MobileNavbar" />
     <router-view v-slot="{ Component }">
       <keep-alive>
         <component v-if="route.meta.keepAlive" :is="Component" :key="route.fullPath" />
@@ -12,7 +13,9 @@
 </template>
 
 <script setup>
-import Navbar from '@/components/Navbar/index.vue'
+import { isPc, isMobile } from '@/utils/ua'
+import PcNavbar from '@/components/Navbar/pc.vue'
+import MobileNavbar from '@/components/Navbar/mobile.vue'
 
 const route = useRoute()
 

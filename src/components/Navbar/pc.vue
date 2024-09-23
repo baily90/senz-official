@@ -7,7 +7,7 @@
         src="@/assets/images/icon_logo.png"
         alt="icon_logo"
         @click="onGoHomeHandle">
-        <div class="nav">
+        <!-- <div class="nav">
           <div
             class="nav-item  wow fadeInDown"
             :class="{ act: nav.selected }"
@@ -16,7 +16,7 @@
             @click="onClickHandle(nav)">
             {{nav.name}}
           </div>
-        </div>
+        </div> -->
       <img
       @dragstart.prevent
       class="icon-qr wow fadeInRight"
@@ -74,8 +74,8 @@ const onGoHomeHandle = () => router.replace('/')
   background-color: transparent;
   transition: all ease .3s;
   &.dark {
-    background-color: rgba(0, 0, 0, .6);
-    backdrop-filter: blur(25px)
+    background-color: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(20px)
   }
   .navbar {
     display: flex;

@@ -1,5 +1,5 @@
 <template>
-  about
+  mobile-about
 </template>
 
 <script setup>

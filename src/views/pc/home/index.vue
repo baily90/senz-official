@@ -22,13 +22,13 @@
     <section class="image">
       <van-swipe ref="swipe" :show-indicators="false" :autoplay="3000" :duration="1000" @change="onChange" class="swipe wow fadeInLeft" data-wow-delay="0.2s">
         <van-swipe-item class="swipe-item">
-          <img @dragstart.prevent src="@/assets/images/pc/software1.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/software1.png" alt="software" />
         </van-swipe-item>
         <van-swipe-item class="swipe-item">
-          <img @dragstart.prevent src="@/assets/images/pc/software2.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/software2.png" alt="software" />
         </van-swipe-item>
         <van-swipe-item class="swipe-item">
-          <img @dragstart.prevent src="@/assets/images/pc/software3.png" alt="software" />
+          <img @dragstart.prevent src="@/assets/images/software3.png" alt="software" />
         </van-swipe-item>
       </van-swipe>
       <div class="content wow fadeInRight" data-wow-delay="0.2s">
@@ -67,10 +67,10 @@
         </div>
         <div class="second-title wow fadeInUp" data-wow-delay="0.4s">无场地要求、无影像科要求、赋能基层诊所，共创基层影像家园</div>
         <van-button class="btn-contact wow fadeInUp" data-wow-delay="0.5s" link type="primary" @click="onScrollBottomHandle">进一步了解我们的任务</van-button>
-        <img @dragstart.prevent class="left-img wow fadeInUp" data-wow-delay="0.5s" src="@/assets/images/pc/home2.png" alt="mission" />
+        <img @dragstart.prevent class="left-img wow fadeInUp" data-wow-delay="0.5s" src="@/assets/images/home2.png" alt="mission" />
       </div>
       <div class="right">
-        <img @dragstart.prevent class="wow fadeInDown"  data-wow-delay="0.2s" src="@/assets/images/pc/home1.png" alt="mission" />
+        <img @dragstart.prevent class="wow fadeInDown"  data-wow-delay="0.2s" src="@/assets/images/home1.png" alt="mission" />
       </div>
     </section>
 
@@ -78,7 +78,7 @@
     <section class="about">
       <div class="first-title wow fadeInDown" data-wow-delay="0.2s">权威认证</div>
       <div class="second-title wow fadeInUp" data-wow-delay="0.5s">荣获多种权威认证证书</div>
-      <img @dragstart.prevent src="@/assets/images/pc/about.gif" class="cert" alt="GIF Image" />
+      <img @dragstart.prevent src="@/assets/images/about.gif" class="cert" alt="GIF Image" />
     </section>
 
     <!-- 联系我们 -->

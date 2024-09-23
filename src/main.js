@@ -5,6 +5,7 @@ import 'default-passive-events'
 import Vconsole from 'vconsole'
 import './main.less'
 import '@vant/touch-emulator'
+import '@/utils/flexible'
 
 const app = createApp(App)
 
