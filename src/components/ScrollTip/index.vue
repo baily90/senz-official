@@ -10,21 +10,20 @@
 <style lang="less" scoped>
 @keyframes loop {
   from {
-    top: -39PX;
+    top: -39px;
   }
   to {
-    top: 58PX;
+    top: 58px;
   }
 }
 .container-scroll-tip {
   position: relative;
-  min-width: 2PX;
-  height: 95PX;
+  min-width: 2px;
+  height: 95px;
   font-weight: 400;
-  font-size: 12PX;
+  font-size: 12px;
   .tip {
     position: absolute;
-    top: -10PX;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -32,17 +31,17 @@
     position: absolute;
     left: 50%;
     bottom: 0;
-    margin-left: -1PX;
-    width: 2PX;
-    height: 58PX;
+    margin-left: -1px;
+    width: 2px;
+    height: 58px;
     background-color: hsla(0,0%,100%,.21);
     overflow: hidden;
     .bar {
       position: absolute;
-      top: -39PX;
+      top: -39px;
       left: 0;
-      width: 2PX;
-      height: 39PX;
+      width: 2px;
+      height: 39px;
       background: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
       animation: loop 3s ease infinite;
     }
