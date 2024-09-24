@@ -24,7 +24,7 @@
       <div class="content wow fadeInUp">
         <div class="first-title wow fadeInUp" data-wow-delay="0.2s">软件功能介绍</div>
         <div class="tips wow fadeInUp" data-wow-delay=".3s">Multiple image modes</div>
-        <van-swipe ref="swipe" :show-indicators="false" :autoplay="3000" :duration="1000" @change="onChange" class="swipe wow fadeInLeft" data-wow-delay="0.2s">
+        <van-swipe :show-indicators="false" :autoplay="3000" :duration="1000" class="swipe wow fadeInLeft" data-wow-delay="0.2s">
           <van-swipe-item class="swipe-item">
             <img @dragstart.prevent src="@/assets/images/software1.png" alt="software" />
             <div class="second-title wow fadeInRight">适用范围广泛</div>
@@ -91,8 +91,6 @@ import { useWindowScroll } from '@vueuse/core'
 import ScrollTip from '@/components/ScrollTip/index.vue'
 
 const { y } = useWindowScroll({ behavior: 'smooth' })
-const swipe = ref(null)
-const activeIndex = ref(0)
 const record = ref('沪ICP备19048066号-4')
 const host = window.location.host
 if (host.indexOf('senzco.com') !== -1) {
@@ -101,14 +99,6 @@ if (host.indexOf('senzco.com') !== -1) {
 
 const onScrollBottomHandle = () => {
   y.value = window.document.body.clientHeight
-}
-const onHover = index => {
-  activeIndex.value = index
-  swipe.value.swipeTo(index)
-}
-
-const onChange = index => {
-  activeIndex.value = index
 }
 
 onMounted(() => {
