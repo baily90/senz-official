@@ -7,11 +7,11 @@
         src="@/assets/images/icon_logo.png"
         alt="icon_logo"
         @click="onGoHomeHandle">
-      <div class="btn-menu wow fadeInRight" :class="{'open': isMenuOpen}" @click="() => onToggleMenuOpenHandle()">
+      <!-- <div class="btn-menu wow fadeInRight" :class="{'open': isMenuOpen}" @click="() => onToggleMenuOpenHandle()">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
         <div class="btn-line"></div>
-      </div>
+      </div> -->
     </div>
   </div>
   <van-overlay class-name="overlay" :show="isMenuOpen" @click="() => onToggleMenuOpenHandle()" >

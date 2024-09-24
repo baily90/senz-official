@@ -4,6 +4,9 @@ import { useTitle } from '@vueuse/core'
 import Layout from '@/layout/Layout.vue'
 import { isPc, isMobile } from '@/utils/ua'
 
+/**
+ * type: 'pc'-PC端 'mobile'-移动端 'both'-两端兼容
+ */
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -52,7 +55,7 @@ const router = createRouter({
           name: 'Product310',
           component: () => import('@/views/mobile/product/310.vue'),
           meta: {
-            type: 'mobile'
+            type: 'both'
           }
         },
         {
@@ -60,7 +63,7 @@ const router = createRouter({
           name: 'Product330',
           component: () => import('@/views/mobile/product/330.vue'),
           meta: {
-            type: 'mobile'
+            type: 'both'
           }
         },
         {

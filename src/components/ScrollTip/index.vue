@@ -1,6 +1,6 @@
 <template>
   <div class="container-scroll-tip">
-    <div class="tip">Scroll</div>
+    <div class="tip"></div>
     <div class="scroll-tip">
       <div class="bar"></div>
     </div>
@@ -21,7 +21,7 @@
   min-width: 2px;
   height: 95px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16PX;
   .tip {
     position: absolute;
     left: 50%;
